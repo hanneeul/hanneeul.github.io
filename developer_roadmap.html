@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./sample/heart_icon.png">
+    <title>TO-DO-LIST</title>
+    
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gaegu:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dongle:wght@300;400;700&family=Gaegu:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dongle:wght@300;400;700&family=Gaegu:wght@300;400;700&family=Gowun+Batang:wght@400;700&family=Hi+Melody&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="body" id="tdl_body">
+        <nav class="menu_bar">
+            <ul class="menu">
+                <li><a class="nav_menu home" href="index.html">🏠HOME</a></li>
+                <li><a class="nav_menu aboutme" href="introduce.html">🙋‍♀️HANEUL</a></li>                    <li><a class="nav_menu travel" href="#">🛫TRABLE</a>
+                        <ul>
+                            <li><a href="osaka.html">OSAKA</a></li>
+                            <li><a href="taipei.html">TAIPEI</a></li>
+                            <li><a href="newyork.html">NEW YORK</a></li>
+                        </ul>
+                </li>
+                <li><a class="nav_menu dr" href="developer_roadmap.html">💻MY TO-DO-LIST</a></li>
+                <li><a class="nav_menu signup" href="sign_up.html">🎊SIGN UP</a></li>
+            </ul>                     
+        </nav>
+        <header>
+            <h1>TO-DO-LIST</h1>
+            <form id="new-form" name="todolistFrm" >
+                <input 
+                    type="text"
+                    id=""
+                    name="newInput"
+                    class="newInput input"
+                    placeholder="What do you have planned?" />
+                <button
+                    type="submit" 
+                    id="new-submit"
+                    class="btn"><i class="fa fa-plus"></i>
+                </button>
+
+            </form>
+        </header>
+
+        <main>
+            <div class="plan-list">
+                <h2>Plans</h2>
+
+                <div id="plans">
+                    <div class="plan">
+                        <div class="content">
+                            <input 
+                                type="text"
+                                class="input"
+                                name="text"
+                                id="text"
+                                value="📌 My list to be a great developer" 
+                                readonly />
+                        </div>
+                    </div>
+                <div class="todoLists">
+
+                </div>
+                </div> 
+                <button class="s_button" id="clear_btn" onclick="clearPlan()">Clear all</button>
+            
+        </main>
+        </div>
+        <footer id="dr_footer">
+            <div class="footer-content">
+                <h3>Haneul's Homepage</h3>
+                <ul class="socials">
+                    <li><a href="https://github.com/hanneeul"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://instagram.com/devdevqfe/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCOgso--GKTkpzQQkyWOcWEg"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2022 haneul's homepage. designed by <span>haneul</span></p>
+            </div>
+        </footer>
+        <script src="js/todolist.js"></script>
+    </div>
+</body>
+</html>

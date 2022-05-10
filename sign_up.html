@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./sample/heart_icon.png">
+    <title>SIGN IN / SIGN UP</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gaegu:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dongle:wght@300;400;700&family=Gaegu:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dongle:wght@300;400;700&family=Gaegu:wght@300;400;700&family=Gowun+Batang:wght@400;700&family=Hi+Melody&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="body" id="sign_body">
+    <nav class="menu_bar"> 
+        <ul class="menu">
+            <li><a class="nav_menu home" href="index.html">🏠HOME</a></li>
+            <li><a class="nav_menu aboutme" href="introduce.html">🙋‍♀️HANEUL</a></li>
+            <li><a class="nav_menu travel" href="#">🛫TRABLE</a>
+                    <ul>
+                        <li><a href="osaka.html">OSAKA</a></li>
+                        <li><a href="taipei.html">TAIPEI</a></li>
+                        <li><a href="newyork.html">NEW YORK</a></li>
+                    </ul>
+            </li>
+            <li><a class="nav_menu dr" href="developer_roadmap.html">💻MY TO-DO-LIST</a></li>
+            <li><a class="nav_menu signup" href="sign_up.html">🎊SIGN UP</a></li>
+        </ul>                     
+    </nav>              
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form onsubmit="saveGuestbook();" name="guestbookFrm" class="form" id="form">
+                <!-- Create Account -->         
+                <h1 class="s_h1">Create Account</h1><br>
+                <span class="s_span">or use your email for registration</span>
+              
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" autocomplete="on" placeholder="김하늘"> 
+                    <small>Error message</small>
+                </div>
+                
+                <div class="form-control">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" autocomplete="on" placeholder="haneul1217@naver.com">
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="pw">Password</label>
+                    <input type="password" id="pw" name="pw" autocomplete="on" placeholder="Password" />
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="pwc"></label>
+                    <input type="password" name="pwc" id="pwc" autocomplete="on" placeholder="Confirm Password" />  
+                    <small>Error message</small>
+                </div>
+                <br>
+                <div class="social-container">
+                    <a href="https://ko-kr.facebook.com/" class="social"><li><i class="fa fa-facebook"></i></li></a>
+                    <a href="https://accounts.kakao.com/" class="social"><li><i class="fa fa-comment"></i></li></a>
+                    <a href="https://www.google.com/" class="social"><li><i class="fa fa-google"></i></li></a>
+                </div>
+                <br>        
+                <button type="submit" id="su_btn" class="s_button" value="">Sign Up</button>
+            </form>        
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#">        
+                <h1 class="s_h1">Sign up</h1><br>
+                <span class="s_span">or use your account</span>
+                <input type="email" placeholder="Email" autocomplete="on"/>
+                <input type="password" placeholder="Password" autocomplete="on"/>
+                <a href="#" class="s_a">Forgot your password?</a>
+                <div class="social-container">
+                    <a href="https://ko-kr.facebook.com/" class="social"><li><i class="fa fa-facebook"></i></li></a>
+                    <a href="https://accounts.kakao.com/" class="social"><li><i class="fa fa-comment"></i></li></a>
+                    <a href="https://www.google.com/" class="social"><li><i class="fa fa-google"></i></li></a>
+                </div>
+                <br>
+                <button class="s_button">Sign Up</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="s_h1">Welcome Back!</h1>
+                    <p class="s_p">To keep connected with us please login with your personal info</p>
+                    
+                    <img class="su_img" src="sample/rabbit2.gif" alt=""><br>       
+                    <button class="s_button ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="s_h1">Hello, Friend!</h1>
+                    <p class="s_p">Enter your personal details and start journey with us</p>
+                    <img class="su_img" src="sample/rabbit.gif" alt=""><br>
+                    <button class="s_button ghost" id="signUp">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p id="scroll_comment">⬇ If you are a member of our site, you can view the <span id="ml">member list</span>. ⬇</p>
+    <br>
+    <table id="tb-guest">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>비밀번호</th>
+                <th>가입일시</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <footer id="su_footer">
+        <div class="footer-content">
+            <h3>Haneul's Homepage</h3>
+            <ul class="socials">
+                <li><a href="https://github.com/hanneeul"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://instagram.com/devdevqfe/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOgso--GKTkpzQQkyWOcWEg"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 haneul's homepage. designed by <span>haneul</span></p>
+        </div>
+    </footer>
+    <script src="js/signUp.js"></script> 
+    <script src="js/signUp2.js"></script> 
+    <script src="js/member.js"></script>
+</body>
+</html>
